@@ -1,6 +1,9 @@
 /*global Q*/
 (function () {
     'use strict';
+    /* The difference with $ is when a then rejects with an error
+     * Check the $ code
+     */
     var deferred = Q.defer();
     deferred.promise.then(
         function success() {

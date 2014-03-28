@@ -1,6 +1,10 @@
 /*global Q, $*/
 (function () {
     'use strict';
+    /* Parallel requests example
+     * Note: use spread method when using Q
+     * This will give you the values passed by each promise
+     */
     function get(url) {
         var def = Q.defer();
         $.ajax(url)

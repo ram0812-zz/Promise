@@ -1,6 +1,10 @@
 /*global Q, $*/
 (function () {
     'use strict';
+    /* Chaining Example
+     * There are three requests.
+     * If one of them fail the next request will be aborted
+     */
     function get(url) {
         var def = Q.defer();
         $.ajax(url)

@@ -1,6 +1,8 @@
 /*global $*/
 (function () {
     'use strict';
+    /* Difference, a promise returns one value according to promises/A+
+     */
     var deferred = $.Deferred();
     deferred.then(
         function success() {

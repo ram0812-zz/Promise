@@ -1,6 +1,11 @@
 /*global Q, $*/
 (function () {
     'use strict';
+    /* Chaning example
+     * There are 3 requests as the previous example.
+     * The next request will continue even if the previous request fails
+     */
+
     function get(url) {
         var def = Q.defer();
         $.ajax(url)
