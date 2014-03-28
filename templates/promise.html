@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <title>Promise Examples</title>
+    <p>
+        <div>Script Examples:</div>
+        <select id="load_js">
+            <option value="" selected="selected"> - </option>        
+            
+            <option value="01_Q_chaining">01 Q Chaining A</option>
+            <option value="02_Q_chaining">02 Q Chaining B</option>
+            
+            <option value="03_Q_parallel">03 Q Parallel</option>
+
+            <option value="04_Q_differenceA">04 Q Difference 1</option>
+            <option value="05_J_differenceA">05 $ Difference 1 </option>
+            
+            <option value="06_Q_differenceB">06 Q Difference 2</option>
+            <option value="07_J_differenceB">07 $ Difference 2</option> 
+            
+            <option value="promise_es6">ES Harmony</option>
+        </select>
+    </p>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://www.promisejs.org/implementations/q/q-0.9.6.js"></script>
+
+<script>
+    var loadJS = function (name) {
+        $.getScript(name + '.js', function( data, textStatus, jqxhr ) {
+        });
+    }
+    $('#load_js').on('change', function () {
+        if (this.value) {
+            loadJS(this.value);
+        }
+    });
+    $(window).on('load', function () {
+        $('#load_js').trigger('change');   
+    });
+</script>
+</body>
+</html>
